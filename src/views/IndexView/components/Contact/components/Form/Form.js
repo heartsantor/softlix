@@ -1,69 +1,72 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState, useRef } from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
-import emailjs from '@emailjs/browser';
-import LockIcon from '@mui/icons-material/Lock';
-import Link from 'next/link';
+import React, { useState, useRef } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
+import emailjs from "@emailjs/browser";
+import LockIcon from "@mui/icons-material/Lock";
+import Link from "next/link";
 // import Container from 'components/Container';
 // import axios from 'axios';
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 const validationSchema = yup.object({
   firstName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your first name"),
   phone: yup
     .string()
     .trim()
-    .min(10, 'Please enter a valid number')
-    .max(13, 'Please enter a valid number')
-    .required('Please specify your phone number'),
+    .min(10, "Please enter a valid number")
+    .max(13, "Please enter a valid number")
+    .required("Please specify your phone number"),
   email: yup
     .string()
     .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
-  message: yup.string().trim().required('Please specify your requirements'),
+    .email("Please enter a valid email address")
+    .required("Email is required."),
+  message: yup
+    .string()
+    .trim()
+    .required("Please specify your requirements"),
 });
 
 const Contact = () => {
   const form = useRef();
   const router = useRouter();
   const theme = useTheme();
-  const [firstName, setFirstName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [success, setSuccess] = useState('');
-  const [btnLabel, setBtnLabel] = useState('Submit');
+  const [firstName, setFirstName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState("");
+  const [btnLabel, setBtnLabel] = useState("Submit");
   const [submitted, setSubmitted] = useState(false);
 
   const callSheets = async (data) => {
-    const response = await fetch('/api/sheets', {
-      method: 'POST',
+    const response = await fetch("/api/sheets", {
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
     return response;
   };
 
   const initialValues = {
-    firstName: '',
-    phone: '',
-    email: '',
-    message: '',
+    firstName: "",
+    phone: "",
+    email: "",
+    message: "",
   };
   const sendMail = () => {
     emailjs
@@ -71,23 +74,23 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_US_ID,
         form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
           // console.log(form.current);
-          router.push('/thank-page');
+          router.push("/thank-page");
         },
         (error) => {
           console.log(error.text);
-          setBtnLabel('Submit');
-        },
+          setBtnLabel("Submit");
+        }
       );
   };
 
   const onSubmit = (values) => {
-    setBtnLabel('Sending...');
+    setBtnLabel("Sending...");
     let data = {};
     data.firstName = formik.values.firstName;
     data.phone = formik.values.phone;
@@ -112,14 +115,14 @@ const Contact = () => {
       sx={{
         width: 1,
         height: 1,
-        overflow: 'hidden',
+        overflow: "hidden",
       }}
     >
-      <Box sx={{ paddingTop: '0px' }}>
-        <Box sx={{ paddingTop: '0px' }}>
+      <Box sx={{ paddingTop: "0px" }}>
+        <Box sx={{ paddingTop: "0px" }}>
           <Typography
-            variant={'h4'}
-            sx={{ fontWeight: 700, paddingTop: '0px' }}
+            variant={"h4"}
+            sx={{ fontWeight: 700, paddingTop: "0px" }}
           >
             Contact us
           </Typography>
@@ -222,29 +225,24 @@ const Contact = () => {
                 <Box>
                   <h5
                     style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      alignItems: 'center',
+                      display: "flex",
+                      flexWrap: "wrap",
+                      alignItems: "center",
                       // wordSpacing: '3px',
-                      color: '#677788',
+                      color: "#677788",
                     }}
                   >
-                    <div style={{ display: 'inline', marginRight: '3px' }}>
+                    <div style={{ display: "inline", marginRight: "3px" }}>
                       <LockIcon style={{ margin: 0, padding: 0 }} />
                     </div>
-                    <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                    <div style={{ marginLeft: "3px", marginRight: "3px" }}>
                       By clicking the "submit" button, you are agreeing to
                     </div>
-                    <Link href={'/company-terms'}>
-                      <a> SOFTLIX terms of use </a>
-                    </Link>
-                    <div style={{ marginLeft: '3px', marginRight: '3px' }}>
+                    <Link href={"/company-terms"}>SOFTLIX terms of use</Link>
+                    <div style={{ marginLeft: "3px", marginRight: "3px" }}>
                       and
                     </div>
-                    <Link href={'/privacy-policy'}>
-                      <a> privacy policy</a>
-                    </Link>
-                    .
+                    <Link href={"/privacy-policy"}>privacy policy</Link>.
                   </h5>
                 </Box>
               </Grid>

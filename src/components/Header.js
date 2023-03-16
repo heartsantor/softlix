@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import Logo from '../../public/images/IMG_3570.png';
-import Form from './Form';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import Logo from "../../public/images/IMG_3570.png";
+import Form from "./Form";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -17,15 +17,15 @@ export default function Header() {
       setHeaderClr(false);
     }
   };
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', changeBackground);
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeBackground);
   }
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ease-in-out ${
-          headerClr ? 'bg-white shadow-sm' : 'bg-transparent'
+          headerClr ? "bg-white shadow-sm" : "bg-transparent"
         }`}
       >
         <div className="bottom_row relative z-40 ">
@@ -43,7 +43,7 @@ export default function Header() {
               <div className="flex md:hidden">
                 <button
                   type="button"
-                  className={`${headerClr ? 'text-black' : 'text-white'}`}
+                  className={`${headerClr ? "text-black" : "text-white"}`}
                   aria-label="toggle menu"
                   onClick={() => {
                     setOpen(!open);
@@ -90,7 +90,7 @@ export default function Header() {
             {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
             <div
               className={` ${
-                open ? '-translate-x-0' : '-translate-x-full'
+                open ? "-translate-x-0" : "-translate-x-full"
               } absolute inset-x-0 z-40 px-6 py-2 transition-all duration-300 ease-in-out bg-white top-16 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-full md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between w-full`}
             >
               <div className="flex flex-col md:flex-row md:mx-1 ">
@@ -98,8 +98,8 @@ export default function Header() {
                   <a
                     className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
                       headerClr
-                        ? 'md:text-black/70 md:hover:text-black'
-                        : 'md:text-white/60 md:hover:text-white'
+                        ? "md:text-black/70 md:hover:text-black"
+                        : "md:text-white/60 md:hover:text-white"
                     }`}
                   >
                     Feature
@@ -109,34 +109,32 @@ export default function Header() {
                   <a
                     className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
                       headerClr
-                        ? 'md:text-black/70 md:hover:text-black'
-                        : 'md:text-white/60 md:hover:text-white'
+                        ? "md:text-black/70 md:hover:text-black"
+                        : "md:text-white/60 md:hover:text-white"
                     }`}
                   >
                     Pricing
                   </a>
                 </Link>
-                <Link href="#support">
-                  <a
-                    className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
-                      headerClr
-                        ? 'md:text-black/70 md:hover:text-black'
-                        : 'md:text-white/60 md:hover:text-white'
-                    }`}
-                  >
-                    Support
-                  </a>
+                <Link
+                  href="#support"
+                  className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
+                    headerClr
+                      ? "md:text-black/70 md:hover:text-black"
+                      : "md:text-white/60 md:hover:text-white"
+                  }`}
+                >
+                  Support
                 </Link>
-                <Link href="#testimonial">
-                  <a
-                    className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
-                      headerClr
-                        ? 'md:text-black/70 md:hover:text-black'
-                        : 'md:text-white/60 md:hover:text-white'
-                    }`}
-                  >
-                    Testimonials
-                  </a>
+                <Link
+                  href="#testimonial"
+                  className={`my-2 text-base font-normal transition-colors duration-300 transform md:mx-4 md:my-0 ${
+                    headerClr
+                      ? "md:text-black/70 md:hover:text-black"
+                      : "md:text-white/60 md:hover:text-white"
+                  }`}
+                >
+                  Testimonials
                 </Link>
               </div>
               <div className="md:my-0 my-4">
@@ -159,8 +157,8 @@ export default function Header() {
         <div
           className={`flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:p-0 ${
             form
-              ? 'flex sm:block bg-black/30 fixed inset-0 z-10 overflow-y-auto'
-              : 'hidden'
+              ? "flex sm:block bg-black/30 fixed inset-0 z-10 overflow-y-auto"
+              : "hidden"
           }`}
           aria-labelledby="modal-title"
           role="dialog"

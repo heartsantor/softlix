@@ -363,11 +363,11 @@ const Form = () => {
                 By clicking the "submit" button, you are agreeing to
               </div>
               <Link href={'/company-terms'}>
-                <a> SOFTLIX terms of use </a>
+                 SOFTLIX terms of use 
               </Link>
               <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
               <Link href={'/privacy-policy'}>
-                <a> privacy policy</a>
+                 privacy policy
               </Link>
               .
             </h5>

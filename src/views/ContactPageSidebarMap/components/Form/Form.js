@@ -1,62 +1,65 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef, useState } from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material/styles';
-import emailjs from '@emailjs/browser';
-import { useRouter } from 'next/router';
-import LockIcon from '@mui/icons-material/Lock';
-import Link from 'next/link';
+import React, { useRef, useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useTheme } from "@mui/material/styles";
+import emailjs from "@emailjs/browser";
+import { useRouter } from "next/router";
+import LockIcon from "@mui/icons-material/Lock";
+import Link from "next/link";
 
-import Container from 'components/Container';
-import axios from 'axios';
+import Container from "components/Container";
+import axios from "axios";
 const validationSchema = yup.object({
   firstName: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid name')
-    .max(50, 'Please enter a valid name')
-    .required('Please specify your first name'),
+    .min(2, "Please enter a valid name")
+    .max(50, "Please enter a valid name")
+    .required("Please specify your first name"),
   phone: yup
     .string()
     .trim()
-    .min(10, 'Please enter a valid number')
-    .max(13, 'Please enter a valid number')
-    .required('Please specify your phone number'),
+    .min(10, "Please enter a valid number")
+    .max(13, "Please enter a valid number")
+    .required("Please specify your phone number"),
   email: yup
     .string()
     .trim()
-    .email('Please enter a valid email address')
-    .required('Email is required.'),
-  message: yup.string().trim().required('Please specify your requirements'),
+    .email("Please enter a valid email address")
+    .required("Email is required."),
+  message: yup
+    .string()
+    .trim()
+    .required("Please specify your requirements"),
 });
 
 const Contact = () => {
   const formRef = useRef();
   const router = useRouter();
   const theme = useTheme();
-  const [firstName, setFname] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [success, setSuccess] = useState('');
-  const [btnLabel, setBtnLabel] = useState('Get Quote');
+  const [firstName, setFname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState("");
+  const [btnLabel, setBtnLabel] = useState("Get Quote");
   const [submitted, setSubmitted] = useState(false);
 
   const callSheets = async (data) => {
-    const response = await fetch('/api/sheets/contactus', {
-      method: 'POST',
+    const response = await fetch("/api/sheets/contactus", {
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
     return response;
@@ -64,7 +67,7 @@ const Contact = () => {
 
   const onSubmit = async (values) => {
     // console.log(formRef);
-    setBtnLabel('Sending...');
+    setBtnLabel("Sending...");
     let data = {};
     data.firstName = formik.values.firstName;
     data.phone = formik.values.phone;
@@ -80,10 +83,10 @@ const Contact = () => {
     return values;
   };
   const initialValues = {
-    firstName: '',
-    phone: '',
-    email: '',
-    message: '',
+    firstName: "",
+    phone: "",
+    email: "",
+    message: "",
   };
   const formik = useFormik({
     initialValues,
@@ -97,19 +100,19 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_US_ID,
         formRef.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
           console.log(formRef.current);
           // console.log(data);
-          router.push('/thank-page');
+          router.push("/thank-page");
         },
         (error) => {
           console.log(error.text);
-          setBtnLabel('Get Quote');
-        },
+          setBtnLabel("Get Quote");
+        }
       );
   };
 
@@ -118,18 +121,18 @@ const Contact = () => {
       sx={{
         width: 1,
         height: 1,
-        overflow: 'hidden',
+        overflow: "hidden",
       }}
     >
       <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
         <Box
-          display={'flex'}
-          flexDirection={{ xs: 'column', md: 'row' }}
-          position={'relative'}
+          display={"flex"}
+          flexDirection={{ xs: "column", md: "row" }}
+          position={"relative"}
         >
           <Box
-            display={'flex'}
-            alignItems={'center'}
+            display={"flex"}
+            alignItems={"center"}
             width={1}
             order={{ xs: 2, md: 1 }}
           >
@@ -138,7 +141,7 @@ const Contact = () => {
               <Box>
                 <Box marginBottom={4}>
                   <Typography
-                    variant={'h3'}
+                    variant={"h3"}
                     sx={{ fontWeight: 700 }}
                     gutterBottom
                   >
@@ -270,35 +273,33 @@ const Contact = () => {
                         <Box>
                           <h5
                             style={{
-                              display: 'flex',
-                              flexWrap: 'wrap',
-                              alignItems: 'center',
+                              display: "flex",
+                              flexWrap: "wrap",
+                              alignItems: "center",
                               // wordSpacing: '3px',
-                              color: '#677788',
+                              color: "#677788",
                             }}
                           >
                             <div
-                              style={{ display: 'inline', marginRight: '3px' }}
+                              style={{ display: "inline", marginRight: "3px" }}
                             >
                               <LockIcon style={{ margin: 0, padding: 0 }} />
                             </div>
                             <div
-                              style={{ marginLeft: '3px', marginRight: '3px' }}
+                              style={{ marginLeft: "3px", marginRight: "3px" }}
                             >
                               By clicking the "submit" button, you are agreeing
                               to
                             </div>
-                            <Link href={'/company-terms'}>
-                              <a> SOFTLIX terms of use </a>
+                            <Link href={"/company-terms"}>
+                              SOFTLIX terms of use
                             </Link>
                             <div
-                              style={{ marginLeft: '3px', marginRight: '3px' }}
+                              style={{ marginLeft: "3px", marginRight: "3px" }}
                             >
                               and
                             </div>
-                            <Link href={'/privacy-policy'}>
-                              <a> privacy policy</a>
-                            </Link>
+                            <Link href={"/privacy-policy"}>privacy policy</Link>
                             .
                           </h5>
                         </Box>
@@ -311,34 +312,34 @@ const Contact = () => {
           </Box>
           <Box
             sx={{
-              flex: { xs: '0 0 100%', md: '0 0 50%' },
-              position: 'relative',
-              maxWidth: { xs: '100%', md: '50%' },
+              flex: { xs: "0 0 100%", md: "0 0 50%" },
+              position: "relative",
+              maxWidth: { xs: "100%", md: "50%" },
               minHeight: { xs: 300, md: 600 },
               order: { xs: 1, md: 2 },
             }}
           >
             <Box
               sx={{
-                width: { xs: 1, md: '50vw' },
-                height: '100%',
-                position: 'relative',
+                width: { xs: 1, md: "50vw" },
+                height: "100%",
+                position: "relative",
               }}
             >
               <Box
                 sx={{
-                  width: '100%',
-                  height: '100%',
-                  overflow: 'hidden',
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
                 }}
               >
                 <Box
                   sx={{
-                    overflow: 'hidden',
-                    left: '0%',
+                    overflow: "hidden",
+                    left: "0%",
                     width: 1,
                     height: 1,
-                    position: { xs: 'relative', md: 'absolute' },
+                    position: { xs: "relative", md: "absolute" },
                   }}
                 >
                   {/* <RightSide /> */}
@@ -354,9 +355,9 @@ const Contact = () => {
                     style={{
                       minHeight: 300,
                       filter:
-                        theme.palette.mode === 'dark'
-                          ? 'grayscale(0.5) opacity(0.7)'
-                          : 'none',
+                        theme.palette.mode === "dark"
+                          ? "grayscale(0.5) opacity(0.7)"
+                          : "none",
                     }}
                   />
                 </Box>

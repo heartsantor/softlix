@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Dialog from '@mui/material/Dialog';
-import Button from '@mui/material/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Dialog from "@mui/material/Dialog";
+import Button from "@mui/material/Button";
 // import TextField from '@mui/material/TextField';
 // import Button from '@mui/material/Button';
-import Link from 'next/link';
+import Link from "next/link";
 // import LockIcon from '@mui/icons-material/Lock';
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 
 // import MenuItem from '@mui/material/MenuItem';
 //import axios from 'axios'
@@ -23,42 +23,42 @@ const PopupBox = ({ onClose, open }) => {
     <Dialog
       onClose={onClose}
       open={open}
-      maxWidth={'100%'}
+      maxWidth={"100%"}
       sx={{
         // width: '100%',
-        '& .MuiPaper-root': {
+        "& .MuiPaper-root": {
           // borderRadius: 4,
-          width: '100%',
-          maxWidth: '100%',
+          width: "100%",
+          maxWidth: "100%",
           // width: '100%',
-          borderRadius: '0.4375rem',
-          margin: '0',
-          paddingTop: '0px',
+          borderRadius: "0.4375rem",
+          margin: "0",
+          paddingTop: "0px",
         },
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           paddingY: { xs: 0, sm: 0 },
           paddingX: { xs: 0, sm: 0 },
-          width: '100%',
-          maxWidth: '420px',
+          width: "100%",
+          maxWidth: "420px",
           // width: '100%',
-          margin: '0',
-          padding: '0',
+          margin: "0",
+          padding: "0",
         }}
       >
-        <Box sx={{ width: '100%', margin: '0', padding: '0' }}>
+        <Box sx={{ width: "100%", margin: "0", padding: "0" }}>
           <Box
             md="4"
             sx={{
-              width: '100%',
-              margin: '0',
-              padding: '0',
-              border: 'none!important',
+              width: "100%",
+              margin: "0",
+              padding: "0",
+              border: "none!important",
             }}
           >
             <Box>
@@ -104,57 +104,57 @@ const PopupBox = ({ onClose, open }) => {
                   <Grid item xs={12} md={12}>
                     <Box
                       sx={{
-                        fontSize: '1.3rem',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        width: '90vw',
-                        gap: '20px',
-                        padding: '30px 40px',
-                        ['@media (min-width:320px) and (max-width:600px)']: {
+                        fontSize: "1.3rem",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        width: "90vw",
+                        gap: "20px",
+                        padding: "30px 40px",
+                        ["@media (min-width:320px) and (max-width:600px)"]: {
                           // eslint-disable-line no-useless-computed-key
-                          flexDirection: 'column',
-                          padding: '18px 10px',
-                          gap: '0px',
+                          flexDirection: "column",
+                          padding: "18px 10px",
+                          gap: "0px",
                         },
                       }}
                     >
                       <Box
                         // style={{}}
                         sx={{
-                          display: 'flex',
-                          flexWrap: 'wrap',
-                          alignItems: 'center',
+                          display: "flex",
+                          flexWrap: "wrap",
+                          alignItems: "center",
                           // wordSpacing: '3px',
-                          color: '#212121',
-                          maxWidth: '60vw',
-                          ['@media (min-width:390px) and (max-width:600px)']: {
+                          color: "#212121",
+                          maxWidth: "60vw",
+                          ["@media (min-width:390px) and (max-width:600px)"]: {
                             // eslint-disable-line no-useless-computed-key
-                            maxWidth: '100vw',
-                            padding: '5px 10px',
-                            fontSize: '16px',
-                            fontFamily: 'sans-serif',
+                            maxWidth: "100vw",
+                            padding: "5px 10px",
+                            fontSize: "16px",
+                            fontFamily: "sans-serif",
                           },
                         }}
                       >
-                        <h3 style={{ margin: '0px' }}>
-                          We use cookies to improve your experience{' '}
+                        <h3 style={{ margin: "0px" }}>
+                          We use cookies to improve your experience{" "}
                         </h3>
                         <br /> We use cookies to deliver the best possible
                         experience on our website. To learn more, visit our
-                        {'  '}
-                        <Link href={'/privacy-policy'}>
-                          <a
+                        {"  "}
+                        <Link href={"/privacy-policy"}>
+                          <span
                             style={{
-                              marginLeft: '4px',
-                              marginRight: '4px',
-                              display: 'contents',
-                              cursor: 'pointer',
+                              marginLeft: "4px",
+                              marginRight: "4px",
+                              display: "contents",
+                              cursor: "pointer",
                             }}
                           >
-                            {' '}
-                            privacy policy.{' '}
-                          </a>
+                            {" "}
+                            privacy policy.{" "}
+                          </span>
                         </Link>
                         By continuing to use this site, or closing this box, you
                         consent to our use of cookies.
@@ -162,36 +162,35 @@ const PopupBox = ({ onClose, open }) => {
                           <a> SOFTLIX terms of use </a>
                         </Link> */}
                       </Box>
-                      <Box sx={{ display: 'flex' }}>
+                      <Box sx={{ display: "flex" }}>
                         <Button
                           onClick={onClose}
-                          component={'a'}
+                          component={"a"}
                           sx={{
-                            backgroundColor: '#0000d3',
-                            width: '125px',
+                            backgroundColor: "#0000d3",
+                            width: "125px",
 
-                            fontFamily: 'Inter',
+                            fontFamily: "Inter",
                             // fontSize: '16px',
-                            fontSize: '1rem',
-                            padding: '12px 10px',
-                            borderRadius: '0px',
-                            color: 'white',
+                            fontSize: "1rem",
+                            padding: "12px 10px",
+                            borderRadius: "0px",
+                            color: "white",
                             // border: '1px solid  #0000d3',
                             fontWeight: 700,
-                            '&:hover': {
-                              backgroundColor: '#0000A9',
+                            "&:hover": {
+                              backgroundColor: "#0000A9",
                             },
 
-                            ['@media (min-width:390px) and (max-width:600px)']:
-                              {
-                                // eslint-disable-line no-useless-computed-key
-                                width: '335px',
-                                height: '45px',
-                                padding: '12px 10px',
-                                marginLeft: '15px',
-                                marginTop: '10px',
-                                fontSize: '16px',
-                              },
+                            ["@media (min-width:390px) and (max-width:600px)"]: {
+                              // eslint-disable-line no-useless-computed-key
+                              width: "335px",
+                              height: "45px",
+                              padding: "12px 10px",
+                              marginLeft: "15px",
+                              marginTop: "10px",
+                              fontSize: "16px",
+                            },
                           }}
                           size="small"
                         >
