@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Box from '@mui/material/Box';
@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
-import axios from 'axios';
+import axios from 'axios'
 import { useTheme } from '@mui/material/styles';
 const validationSchema = yup.object({
   firstName: yup
@@ -36,7 +36,7 @@ const validationSchema = yup.object({
       'Please enter a valid phone number.',
     ),
   budget: yup.string().required('Please specify your project budget'),
-  ptype: yup.string().required('Please specify your project Project Type'),
+   ptype: yup.string().required('Please specify your project Project Type'),
   message: yup
     .string()
     .trim()
@@ -44,17 +44,18 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
-  const theme = useTheme();
-  const [firstName, setFname] = useState('');
-  const [lastName, setLname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [success, setSuccess] = useState('');
-  const [budget, setbudget] = useState('');
-  const [ptype, setptype] = useState('');
-  const [message, setMessage] = useState('');
-  const [btnLabel, setBtnLabel] = useState('Submit');
-  const [submitted, setSubmitted] = useState(false);
+
+const theme = useTheme();
+const [firstName, setFname] = useState('')
+const [lastName, setLname] = useState('')
+const [email, setEmail] = useState('')
+const [phone, setPhone] = useState('')
+const[success, setSuccess] = useState('')
+const [budget, setbudget] = useState('')
+const [ptype, setptype] = useState('')
+const[message, setMessage] = useState('')
+const[btnLabel, setBtnLabel] = useState('Submit')
+const [submitted, setSubmitted] = useState(false)
 
   const initialValues = {
     firstName: '',
@@ -68,35 +69,37 @@ const Form = () => {
 
   const onSubmit = (values) => {
     setBtnLabel('Sending...');
-    let data = {};
-    data.firstName = formik.values.firstName;
-    data.lastName = formik.values.lastName;
-    data.email = formik.values.email;
-    data.phone = formik.values.phone;
-    data.budget = formik.values.budget;
-    data.ptype = formik.values.ptype;
-    data.message = formik.values.message;
+    let data = {
+      
+    };
+    data.firstName=formik.values.firstName;
+    data.lastName=formik.values.lastName;
+    data.email=formik.values.email;
+    data.phone=formik.values.phone;
+    data.budget=formik.values.budget;
+    data.ptype=formik.values.ptype;
+    data.message=formik.values.message;
 
     fetch('api/email2', {
       method: 'POST',
       headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     }).then((res) => {
-      console.log('Response received');
+      console.log('Response received')
       if (res.status === 200) {
-        console.log('Response succeeded!');
-        setSubmitted(true);
-        setFname('');
-        setLname('');
-        setEmail('');
-        setMessage('');
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setFname('')
+        setLname('')
+        setEmail('')
+        setMessage('')
         setSuccess('Email sent successfully');
         setBtnLabel('Sent');
       }
-    });
+    })
     return values;
   };
 
@@ -141,7 +144,7 @@ const Form = () => {
               variant="outlined"
               name={'lastName'}
               fullWidth
-              value={formik.values.lastName}
+              value={formik.values.lastName} 
               onChange={formik.handleChange}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
               helperText={formik.touched.lastName && formik.errors.lastName}
@@ -177,7 +180,7 @@ const Form = () => {
               helperText={formik.touched.phone && formik.errors.phone}
             />
           </Grid>
-          <Grid item xs={6}>
+           <Grid item xs={6}>
             <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
               Project Type
             </Typography>
@@ -274,7 +277,7 @@ const Form = () => {
             flexDirection={'column'}
           >
             <Button size={'large'} variant={'contained'} type={'submit'}>
-              {btnLabel}
+             {btnLabel}
             </Button>
             <Typography
               variant={'subtitle2'}
@@ -282,7 +285,7 @@ const Form = () => {
               sx={{ marginTop: 2 }}
               align={'center'}
             >
-              {success}
+            {success} 
             </Typography>
           </Grid>
         </Box>

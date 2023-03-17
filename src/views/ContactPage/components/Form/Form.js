@@ -1,54 +1,51 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef } from "react";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import { useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import { useRouter } from "next/router";
-import emailjs from "@emailjs/browser";
-import LockIcon from "@mui/icons-material/Lock";
-import Link from "next/link";
+import React, { useRef } from 'react';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { useRouter } from 'next/router';
+import emailjs from '@emailjs/browser';
+import LockIcon from '@mui/icons-material/Lock';
+import Link from 'next/link';
 const validationSchema = yup.object({
   fullName: yup
     .string()
     .trim()
-    .min(2, "Please enter a valid full name")
-    .max(50, "Please enter a valid full name")
-    .required("Please specify your full name"),
-  message: yup
-    .string()
-    .trim()
-    .required("Please specify your message"),
+    .min(2, 'Please enter a valid full name')
+    .max(50, 'Please enter a valid full name')
+    .required('Please specify your full name'),
+  message: yup.string().trim().required('Please specify your message'),
   email: yup
     .string()
     .trim()
-    .email("Please enter a valid email address")
-    .required("Email is required"),
+    .email('Please enter a valid email address')
+    .required('Email is required'),
 });
 
 const Form = () => {
-  const [fullName, setFullname] = useState("");
+  const [fullName, setFullname] = useState('');
   // const [mobile, setMobile] = useState('');
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const router = useRouter();
   const formRef = useRef();
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
 
   const initialValues = {
-    fullName: "",
-    message: "",
-    email: "",
+    fullName: '',
+    message: '',
+    email: '',
   };
 
   const sendMail = () => {
@@ -57,17 +54,17 @@ const Form = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_US_ID,
         formRef.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_PUBLIC_KEY,
       )
       .then(
         (result) => {
           console.log(result.text);
           console.log(form.current);
-          router.push("/thank-page");
+          router.push('/thank-page');
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
   };
   const onSubmit = (values) => {
@@ -85,14 +82,14 @@ const Form = () => {
     <Box>
       <Box marginBottom={2}>
         <Typography
-          variant={"h4"}
+          variant={'h4'}
           sx={{ fontWeight: 700 }}
           gutterBottom
-          align={"center"}
+          align={'center'}
         >
           Can't find the answer you need?
         </Typography>
-        <Typography color="text.secondary" align={"center"}>
+        <Typography color="text.secondary" align={'center'}>
           Keep track of what's happening with your data, change permissions, and
           run reports against your data anywhere in the world. Keep track of
           what's happening with your data, change permissions.
@@ -100,13 +97,13 @@ const Form = () => {
       </Box>
       <Box
         maxWidth={600}
-        margin={"0 auto"}
-        component={"form"}
+        margin={'0 auto'}
+        component={'form'}
         sx={{
-          "& .MuiOutlinedInput-root.MuiInputBase-multiline": {
+          '& .MuiOutlinedInput-root.MuiInputBase-multiline': {
             padding: 0,
           },
-          "& .MuiOutlinedInput-input": {
+          '& .MuiOutlinedInput-input': {
             background: theme.palette.background.paper,
             padding: 2,
           },
@@ -194,22 +191,27 @@ const Form = () => {
             </Grid>
             <h5
               style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
                 // wordSpacing: '3px',
-                color: "#677788",
+                color: '#677788',
               }}
             >
-              <div style={{ display: "inline", marginRight: "3px" }}>
+              <div style={{ display: 'inline', marginRight: '3px' }}>
                 <LockIcon style={{ margin: 0, padding: 0 }} />
               </div>
-              <div style={{ marginLeft: "3px", marginRight: "3px" }}>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>
                 By clicking the "submit" button, you are agreeing to
               </div>
-              <Link href={"/company-terms"}>SOFTLIX terms of use</Link>
-              <div style={{ marginLeft: "3px", marginRight: "3px" }}>and</div>
-              <Link href={"/privacy-policy"}>privacy policy</Link>.
+              <Link href={'/company-terms'}>
+                <a> SOFTLIX terms of use </a>
+              </Link>
+              <div style={{ marginLeft: '3px', marginRight: '3px' }}>and</div>
+              <Link href={'/privacy-policy'}>
+                <a> privacy policy</a>
+              </Link>
+              .
             </h5>
           </Grid>
         </form>

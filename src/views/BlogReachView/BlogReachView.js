@@ -16,6 +16,7 @@ import {
 } from './components';
 
 const BlogReachView = ({ blog }) => {
+  
   const theme = useTheme();
   return (
     <Main colorInvert={true}>

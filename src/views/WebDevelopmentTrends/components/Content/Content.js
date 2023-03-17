@@ -270,7 +270,7 @@ const Content = () => {
         <Typography variant={'subtitle1'} marginTop={1}>
           If you are looking for something specific that is not listed on our
           website or have another suggestion or recommendation, please let us
-          know at support@softlix.tech We strive to deliver the best resources
+          know at support@SOFTLIX .tech We strive to deliver the best resources
           you can find in the industry, so your feedback is extremely important
           to us!
         </Typography>
@@ -279,7 +279,7 @@ const Content = () => {
           helps! If it has been useful please share it among colleagues and
           friends. Your feedback is most welcome! If there are specific
           questions about anything or about other features, shoot us an email at
-          support@softlix.tech
+          support@SOFTLIX .tech
         </Typography>
       </Box>
 

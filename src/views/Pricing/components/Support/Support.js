@@ -45,10 +45,7 @@ const Support = () => {
                   </Box>
                 }
               >
-                <Link underline="none" href="/contact" component="a">
-                  {' '}
-                  Contact us
-                </Link>
+           <Link underline="none" href="/contact" component="a" >     Contact us</Link>
               </Button>
             </Box>
           </Box>
@@ -71,7 +68,7 @@ const Support = () => {
               align={'center'}
               gutterBottom
             >
-              Customize plan
+              Customize plan 
             </Typography>
             <Typography align={'center'}>
               Looking for something else? Request a Consultation to customize a
@@ -99,10 +96,7 @@ const Support = () => {
                   </Box>
                 }
               >
-                <Link underline="none" href="/hire-us" component="a">
-                  {' '}
-                  Learn more{' '}
-                </Link>
+              <Link underline="none" href="/hire-us" component="a" >   Learn more </Link>
               </Button>
             </Box>
           </Box>

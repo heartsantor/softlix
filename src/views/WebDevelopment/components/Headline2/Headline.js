@@ -41,12 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer web development services that can help you create a website
-          that is both visually appealing and user-friendly. Our team of web
-          developers are experts in various programming languages and can create
-          a custom website that meets your specific needs.
+         We offer web development services that can help you create a website that is both visually appealing and user-friendly. Our team of web developers are experts in various programming languages and can create a custom website that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

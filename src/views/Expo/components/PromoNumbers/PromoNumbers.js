@@ -20,7 +20,7 @@ export const mock = [
     number: '2,500+',
   },
   {
-    title: "CEO's",
+    title: 'CEO\'s',
     number: '11,000+',
   },
   {

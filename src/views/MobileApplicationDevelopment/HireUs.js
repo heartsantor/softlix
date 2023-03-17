@@ -5,14 +5,7 @@ import Divider from '@mui/material/Divider';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-  Headline,
-  Headline2,
-  FeaturesWithSimpleIcons,
-  Features2,
-  Form,
-  Partners,
-} from './components';
+import { Headline,Headline2,FeaturesWithSimpleIcons, Features2, Form, Partners } from './components';
 
 const HireUs = () => {
   const theme = useTheme();
@@ -28,11 +21,11 @@ const HireUs = () => {
             paddingTop: 13,
           }}
         >
-          <Container>
+        <Container>
             <Headline2 />
           </Container>
           <FeaturesWithSimpleIcons />
-          <Features2 />
+          <Features2/>
           <Container>
             <Headline />
           </Container>
@@ -43,7 +36,9 @@ const HireUs = () => {
         <Container>
           <Divider />
         </Container>
-        <Container paddingTop={'0 !important'}>{/*<Partners />*/}</Container>
+        <Container paddingTop={'0 !important'}>
+          {/*<Partners />*/}
+        </Container>
       </Box>
     </Main>
   );

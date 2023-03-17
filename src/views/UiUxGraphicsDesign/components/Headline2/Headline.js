@@ -34,19 +34,18 @@ const Headline = () => {
           gutterBottom
           align={'center'}
         >
-          UI/UX Design
+        UI/UX Design
         </Typography>
         <Typography
           variant="h6"
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer UI/UX design services that can help you create a web or
-          mobile application that is both aesthetically pleasing and easy to
-          use. Our team of designers are experienced in various design tools and
-          can create a custom interface that meets your specific needs.
+      We offer UI/UX design services that can help you create a web or mobile application that is both aesthetically pleasing and easy to use. Our team of designers are experienced in various design tools and can create a custom interface that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

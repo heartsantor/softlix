@@ -24,7 +24,10 @@ const validationSchema = yup.object({
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
-  bio: yup.string().trim().max(500, 'Should be less than 500 chars'),
+  bio: yup
+    .string()
+    .trim()
+    .max(500, 'Should be less than 500 chars'),
   country: yup
     .string()
     .trim()

@@ -39,7 +39,9 @@ const Integrations = () => {
                   width={1}
                   src={item}
                   alt="..."
-                  sx={{}}
+                  sx={{
+                    
+                  }}
                 />
               </Box>
             ))}

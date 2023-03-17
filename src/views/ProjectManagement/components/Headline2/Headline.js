@@ -41,15 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer project management services that can help you plan, execute,
-          and track your web development or software development project. Our
-          team of project managers are experienced in various project management
-          tools and can help you keep your project on schedule and within
-          budget. Contact us today to learn more about our web development, app
-          development, digital marketing, enterprise software development, data
-          science, QA and testing, and project management services!
+         We offer project management services that can help you plan, execute, and track your web development or software development project. Our team of project managers are experienced in various project management tools and can help you keep your project on schedule and within budget. Contact us today to learn more about our web development, app development, digital marketing, enterprise software development, data science, QA and testing, and project management services!
         </Typography>
         {/*<Button
               variant="contained"

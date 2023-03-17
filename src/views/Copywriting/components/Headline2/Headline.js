@@ -41,12 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer copywriting services that can help you create compelling
-          content for your website or blog. Our team of writers are experienced
-          in various writing styles and can create original content that engages
-          your audience.
+         We offer copywriting services that can help you create compelling content for your website or blog. Our team of writers are experienced in various writing styles and can create original content that engages your audience.
         </Typography>
         {/*<Button
               variant="contained"

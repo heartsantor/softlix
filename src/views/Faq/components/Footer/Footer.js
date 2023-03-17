@@ -31,33 +31,33 @@ const Footer = () => {
         justifyContent={'center'}
         alignItems={{ xs: 'stretched', sm: 'center' }}
       >
-        <Button
-          component={'a'}
-          variant="contained"
-          color="primary"
-          size="large"
-          fullWidth={isMd ? false : true}
-          href={'/hire-us'}
-          target={'_blank'}
-        >
-          Get Quotation
-        </Button>
-        <Box
-          marginTop={{ xs: 2, sm: 0 }}
-          marginLeft={{ sm: 2 }}
-          width={{ xs: '100%', md: 'auto' }}
-        >
-          <Button
-            component={'a'}
-            href={'/portfolio'}
-            variant="outlined"
-            color="primary"
-            size="large"
-            fullWidth={isMd ? false : true}
-          >
-            View Portfolio
-          </Button>
-        </Box>
+      <Button
+              component={'a'}
+              variant="contained"
+              color="primary"
+              size="large"
+              fullWidth={isMd ? false : true}
+              href={'/hire-us'}
+              target={'_blank'} 
+            >
+              Get Quotation
+            </Button>
+            <Box
+              marginTop={{ xs: 2, sm: 0 }}
+              marginLeft={{ sm: 2 }}
+              width={{ xs: '100%', md: 'auto' }}
+            >
+              <Button
+                component={'a'}
+                href={'/portfolio'}
+                variant="outlined"
+                color="primary"
+                size="large"
+                fullWidth={isMd ? false : true}
+              >
+                 View Portfolio
+              </Button>
+            </Box>
       </Box>
     </Box>
   );

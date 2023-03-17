@@ -39,10 +39,10 @@ const Welcome = () => {
   const GridItemPartnersBlock = () => (
     <Box display="flex" flexWrap="wrap" justifyContent={'center'}>
       {[
-        '/images/logo-1.png',
-        '/images/blive.png',
-        '/images/theprint.png',
-        '/images/midday.png',
+            '/images/logo-1.png',
+            '/images/blive.png',
+            '/images/theprint.png',
+            '/images/midday.png'
       ].map((item, i) => (
         <Box maxWidth={145} marginTop={0} marginRight={4} key={i}>
           <Box

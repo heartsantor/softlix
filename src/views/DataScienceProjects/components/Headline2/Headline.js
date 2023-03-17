@@ -41,14 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer data science services that can help you analyze and interpret
-          data. Our team of data scientists are experienced in various
-          statistical methods and can provide insights that can help you make
-          better business decisions. Contact us today to learn more about our
-          web development, app development, digital marketing, enterprise
-          software development, and data science services!
+         We offer data science services that can help you analyze and interpret data. Our team of data scientists are experienced in various statistical methods and can provide insights that can help you make better business decisions. Contact us today to learn more about our web development, app development, digital marketing, enterprise software development, and data science services!
         </Typography>
         {/*<Button
               variant="contained"

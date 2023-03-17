@@ -28,7 +28,7 @@ const mock = [
   },
   {
     label: 'Email',
-    value: 'support@softlix.tech',
+    value: 'support@SOFTLIX .tech',
     icon: (
       <svg
         width={20}

@@ -5,7 +5,7 @@ const mock = [
   '/images/logo-1.png',
   '/images/blive.png',
   '/images/theprint.png',
-  '/images/midday.png',
+  '/images/midday.png'
 ];
 
 const Partners = () => {

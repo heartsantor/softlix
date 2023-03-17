@@ -41,12 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We develop enterprise software solutions that can help businesses
-          automate their operations. Our team of software developers are
-          experienced in various programming languages and can create a custom
-          solution that meets your specific needs.
+          We develop enterprise software solutions that can help businesses automate their operations. Our team of software developers are experienced in various programming languages and can create a custom solution that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

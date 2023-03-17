@@ -65,7 +65,7 @@ const Map = () => {
           >
             Email us:
           </Typography>
-          <Typography variant={'subtitle1'}>support@softlix.tech</Typography>
+          <Typography variant={'subtitle1'}>support@SOFTLIX .tech</Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography

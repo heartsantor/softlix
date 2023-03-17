@@ -21,7 +21,7 @@ const Story = () => {
               Our story
             </Typography>
             <Typography component={'p'}>
-              qdqw
+             qdqw
               <br />
               <br />
               ddasdasdas

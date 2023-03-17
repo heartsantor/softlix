@@ -109,7 +109,12 @@ const Agency = () => {
         alignItems={'center'}
         id="agency__portfolio-item--js-scroll"
       >
-        <Box className={'jarallax-img'} sx={styles('/images/freshier.png')} />
+        <Box
+          className={'jarallax-img'}
+          sx={styles(
+            '/images/freshier.png',
+          )}
+        />
         <Container>
           <Goby />
         </Container>
@@ -153,7 +158,12 @@ const Agency = () => {
         alignItems={'center'}
         id="agency__portfolio-item--js-scroll"
       >
-        <Box className={'jarallax-img'} sx={styles('/images/sracademy.jpg')} />
+        <Box
+          className={'jarallax-img'}
+          sx={styles(
+            '/images/sracademy.jpg',
+          )}
+        />
         <Container>
           <Nike />
         </Container>
@@ -208,7 +218,7 @@ const Agency = () => {
           <Curology />
         </Container>
       </Box>
-
+      
       <Box
         className={'jarallax'}
         data-jarallax

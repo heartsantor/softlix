@@ -26,6 +26,7 @@ const CompanyTerms = () => {
                 }}
               >
                 Company Terms of use
+
               </Typography>
               <Typography
                 gutterBottom

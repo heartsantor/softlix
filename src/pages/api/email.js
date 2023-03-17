@@ -6,15 +6,15 @@ export default function handler(req, res) {
     port: 587,
     host: 'smtp.gmail.com',
     auth: {
-      user: 'support@softlix.tech',
+      user: 'support@SOFTLIX .tech',
       pass: '4a44wfL&Qu3S',
     },
     secure: false,
   });
 
   const mailData = {
-    from: 'support@softlix.tech',
-    to: 'support@softlix.tech', //shubhamsharma715@gmail.com',
+    from: 'support@SOFTLIX .tech',
+    to: 'support@SOFTLIX .tech', //shubhamsharma715@gmail.com',
     subject: `Message From ${req.body.fname}`,
     text: 'Sent from: ' + req.body.email,
     html: `<p>Name: ${req.body.fname}</p>

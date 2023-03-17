@@ -34,19 +34,18 @@ const Headline = () => {
           gutterBottom
           align={'center'}
         >
-          QA & Testing
+        QA & Testing
         </Typography>
         <Typography
           variant="h6"
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer QA and testing services that can help you ensure the quality
-          of your web or mobile application. Our team of testers are experienced
-          in various testing tools and can provide comprehensive testing that
-          meets your specific needs.
+     We offer QA and testing services that can help you ensure the quality of your web or mobile application. Our team of testers are experienced in various testing tools and can provide comprehensive testing that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

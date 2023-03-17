@@ -41,12 +41,11 @@ const Headline = () => {
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We offer digital marketing services that can help you promote your
-          business online. Our team of digital marketers are experts in various
-          marketing channels and can create a custom marketing campaign that
-          meets your specific needs.
+       We offer digital marketing services that can help you promote your business online. Our team of digital marketers are experts in various marketing channels and can create a custom marketing campaign that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

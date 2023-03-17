@@ -33,7 +33,7 @@ const ContactCard = () => {
           contact us.
         </Typography>
         <Typography variant={'subtitle2'}>
-          support@softlix.tech
+          support@SOFTLIX .tech
           <br />
           bondwithus@SOFTLIX Inc.tech
           <br />

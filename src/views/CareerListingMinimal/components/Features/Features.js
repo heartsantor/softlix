@@ -72,7 +72,7 @@ const Features = () => {
               {[
                 'Affordable, scalable and performant. The perfect solution for small apps.',
                 'A mid-sized solution for businesses undergoing rapid user growth.',
-                "A farm of machines entirely dedicated to your company's storage needs.",
+                'A farm of machines entirely dedicated to your company\'s storage needs.',
                 'A mid-sized solution for businesses undergoing rapid user growth.',
               ].map((item, i) => (
                 <Grid item xs={12} key={i}>

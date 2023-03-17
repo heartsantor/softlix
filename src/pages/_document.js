@@ -25,10 +25,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <title>
+          <title>
             SOFTLIX : Software Development, Mobile Application Development,
             Digital Transformation & Other IT Solutions
-          </title> */}
+          </title>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/images/favicon.ico" />
           <meta name="theme-color" content="#ffffff" />

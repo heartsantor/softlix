@@ -58,40 +58,34 @@ const Partners = () => {
 
   return (
     <Box>
-      <Box
-        sx={{
-          backgroundColor: '#f8f8f8',
-          paddingTop: '30px',
-          paddingBottom: '30px',
-        }}
-      >
-        <Typography
+    <Box sx={{ backgroundColor: '#f8f8f8', paddingTop:'30px', paddingBottom:'30px'}}>
+     <Typography
           variant={'h4'}
           gutterBottom
           align={'center'}
           sx={{ fontWeight: 700 }}
         >
-          Technologies & Tools Used by Us
-        </Typography>
-        <Box sx={{ paddingTop: '50px', paddingBottom: '50px' }}>
-          <Slider {...sliderOpts}>
-            {mock.map((item, i) => (
-              <Box maxWidth={300} key={i} marginX={3}>
-                <Box
-                  component="img"
-                  height={1}
-                  width={1}
-                  src={item}
-                  alt="..."
-                  /*sx={{
+                Technologies & Tools Used by Us
+              </Typography>
+<Box sx={{ paddingTop:'50px', paddingBottom:'50px'}}>
+      <Slider {...sliderOpts} >
+        {mock.map((item, i) => (
+          <Box maxWidth={300} key={i} marginX={3}>
+            <Box
+              component="img"
+              height={1}
+              width={1}
+              src={item}
+              alt="..."
+              /*sx={{
                 filter: 'brightness(0) invert(1)',
               }}*/
-                />
-              </Box>
-            ))}
-          </Slider>
-        </Box>
-      </Box>
+            />
+          </Box>
+        ))}
+      </Slider>
+       </Box> 
+       </Box> 
     </Box>
   );
 };

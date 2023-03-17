@@ -73,8 +73,7 @@ const Users = () => {
         >
           For entrepreneurs, startups and freelancers.
           <br />
-          We are ready to hear from you! If you have any questions, do not
-          hesitate to leave us a message. We will be looking forward to it!
+          We are ready to hear from you! If you have any questions, do not hesitate to leave us a message. We will be looking forward to it!
         </Typography>
         <Box
           display="flex"

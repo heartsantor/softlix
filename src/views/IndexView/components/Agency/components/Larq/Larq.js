@@ -30,7 +30,7 @@ const Larq = () => {
           color: theme.palette.common.white,
         }}
       >
-        Roxia Beauty
+       Roxia Beauty
       </Typography>
     </Box>
   );

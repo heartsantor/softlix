@@ -11,30 +11,36 @@ import Button from '@mui/material/Button';
 
 const mock = [
   {
-    companyLogo: '/images/logo-1.jpg',
+    companyLogo:
+      '/images/logo-1.jpg',
     description:
       'Find adventures nearby or in faraway places and access unique homes, experiences, and places around the world.',
   },
   {
-    companyLogo: '/images/logo-2.jpg',
+    companyLogo:
+      '/images/logo-2.jpg',
     description:
-      "Free delivery on millions of items with Prime. Low prices across earth's biggest selection of books, music, DVDs, electronics, computers, software",
+      'Free delivery on millions of items with Prime. Low prices across earth\'s biggest selection of books, music, DVDs, electronics, computers, software',
   },
   {
-    companyLogo: '/images/logo-3.jpg',
+    companyLogo:
+      '/images/logo-3.jpg',
     description:
-      "Find your fit with Fitbit's family of fitness products that help you stay motivated and improve your health by tracking your activity, exercise.",
+      'Find your fit with Fitbit\'s family of fitness products that help you stay motivated and improve your health by tracking your activity, exercise.',
   },
   {
-    companyLogo: '/images/logo-4.jpg',
+    companyLogo:
+      '/images/logo-4.jpg',
     description:
-      "Search the world's information. Google has many special features to help you find exactly what you're looking for.",
+      'Search the world\'s information. Google has many special features to help you find exactly what you\'re looking for.',
   },
   {
-    companyLogo: '/images/logo-5.jpg',
+    companyLogo:
+      '/images/logo-5.jpg',
     description:
       'HubSpot offers a full platform of marketing, sales, customer service, and CRM software — plus the methodology, resources, and support.',
   },
+  
 ];
 
 const Partners = () => {

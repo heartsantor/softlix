@@ -34,7 +34,7 @@ const mock = [
   {
     title: 'Select companies',
     subtitle:
-      "We'll immediately match you with any relevant openings and you get to pick which ones you're interested in.",
+      'We\'ll immediately match you with any relevant openings and you get to pick which ones you\'re interested in.',
     color: colors.indigo[700],
     icon: (
       <svg

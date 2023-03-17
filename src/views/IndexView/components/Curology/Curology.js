@@ -17,7 +17,7 @@ const Curology = () => {
           fontWeight: 900,
           color: theme.palette.common.white,
           textTransform: 'uppercase',
-          color: '#000',
+          color:'#000',
         }}
       >
         SR Academy

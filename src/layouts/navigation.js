@@ -1,5 +1,7 @@
 const pages = {
-  landings: [],
+  landings: [
+    
+  ],
   company: [
     {
       title: 'Career Lising',

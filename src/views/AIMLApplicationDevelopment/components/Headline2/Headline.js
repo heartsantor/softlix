@@ -34,19 +34,18 @@ const Headline = () => {
           gutterBottom
           align={'center'}
         >
-          AI & ML Application Development
+         AI & ML Application Development
         </Typography>
         <Typography
           variant="h6"
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We develop artificial intelligence and machine learning applications
-          that can help businesses automate their operations. Our team of
-          developers are experienced in various programming languages and can
-          create a custom solution that meets your specific needs.
+        We develop artificial intelligence and machine learning applications that can help businesses automate their operations. Our team of developers are experienced in various programming languages and can create a custom solution that meets your specific needs.
         </Typography>
         {/*<Button
               variant="contained"

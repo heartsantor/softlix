@@ -11,8 +11,7 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 const mock = [
   {
-    image:
-      '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
+    image: '/images/outsourcing-in-India-is-it-the-right-decision-for-your-business.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     title: '5 Best Practices for Outsourcing IT Projects',
@@ -66,7 +65,7 @@ const mock = [
     },
     date: '03 May',
   },
-  {
+    {
     image: '/images/how-to-choose-right-dev.jpeg',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -91,7 +90,7 @@ const SidebarArticles = () => {
           marginBottom: 2,
         }}
       >
-        Similar Posts
+       Similar Posts
       </Typography>
       <Grid container spacing={2}>
         {mock.map((item, i) => (
@@ -142,12 +141,12 @@ const SidebarArticles = () => {
                     variant={'caption'}
                     color={'text.secondary'}
                     component={'i'}
-                  ></Typography>
+                  >
+                   
+                  </Typography>
                 </Box>
-                <Link underline="none" href={item.link} component="a">
-                  {' '}
-                  <Button size={'small'}>Read More</Button>{' '}
-                </Link>
+                <Link underline="none" href={item.link} component="a" >  <Button size={'small'}>Read More</Button>   </Link> 
+                
               </CardContent>
             </Box>
           </Grid>

@@ -74,13 +74,13 @@ const Map = () => {
           </Typography>
           <Box
             component="a"
-            href="mailto:support@softlix.tech"
+            href="mailto:support@SOFTLIX .tech"
             sx={{ color: '#2c4bff', textDecoration: 'none' }}
           >
             {' '}
             <Typography variant={'subtitle1'}>
               {' '}
-              support@softlix.tech{' '}
+              support@SOFTLIX .tech{' '}
             </Typography>{' '}
           </Box>
         </Grid>

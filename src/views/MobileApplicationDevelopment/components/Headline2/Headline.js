@@ -34,18 +34,18 @@ const Headline = () => {
           gutterBottom
           align={'center'}
         >
-          Android & IOS App Development
+         Android & IOS App Development
         </Typography>
         <Typography
           variant="h6"
           color={'text.secondary'}
           align={'center'}
           gutterBottom
-        ></Typography>
+        >
+         
+        </Typography>
         <Typography variant="h6" color={'text.secondary'} align={'center'}>
-          We develop mobile apps for both Android and iOS platforms. Our team of
-          app developers are well-versed in the latest technologies and trends,
-          and can create an app that is both functional and user-friendly.
+        We develop mobile apps for both Android and iOS platforms. Our team of app developers are well-versed in the latest technologies and trends, and can create an app that is both functional and user-friendly.
         </Typography>
         {/*<Button
               variant="contained"

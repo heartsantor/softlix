@@ -17,7 +17,7 @@ const Curology = () => {
           fontWeight: 900,
           color: theme.palette.common.white,
           textTransform: 'uppercase',
-          color: '#000',
+          color:'#000',
         }}
       >
         Zero
@@ -31,7 +31,7 @@ const Curology = () => {
           color: '#000',
         }}
       >
-        Zero Ear (1) Pro
+       Zero Ear (1) Pro 
       </Typography>
     </Box>
   );
